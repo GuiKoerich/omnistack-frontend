@@ -5,7 +5,7 @@ const api = axios.create({
 })
 
 api.interceptors.request.use(function(config) {
-  config.headers.Authorization = sessionStorage.get('ongId')
+  config.headers.Authorization = sessionStorage.getItem('ongId') 
 
   return config
 })

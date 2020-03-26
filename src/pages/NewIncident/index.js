@@ -20,7 +20,7 @@ export default function NewIncident() {
     try {
       const data = { title, description, value }
 
-      const response = await api.post('/incidents', data)
+      await api.post('/incidents', data)
 
       history.push('/')
 
